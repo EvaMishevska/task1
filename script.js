@@ -22,7 +22,7 @@ if(name == 'Денис') {
   alert( 'Ты не из нашей песочницы!'  );
 }
 
-var age = prompt("")
+var age = prompt("куку")
 
 
 var age = prompt("Введите ваш возраст");
