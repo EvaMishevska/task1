@@ -1,15 +1,15 @@
-var a = '';
-var b = 7;
-var c = null;
-var d = 2;
-var e;
+let a = '';
+let b = 7;
+let c = null;
+let d = 2;
+let e;
 
 alert (a || c && b || d);
 alert (e || c && b && d)
 alert ( e || c || b || e && d)
 
 
-var name = prompt("Введите ваше имя");
+let name = prompt("Введите ваше имя");
 
 if(name == 'Денис') {
   alert('Добрый день, учитель');
@@ -22,22 +22,44 @@ if(name == 'Денис') {
   alert( 'Ты не из нашей песочницы!'  );
 }
 
-var age = prompt("куку")
+let age = prompt("Введите ваш возраст")
 
-
-var age = prompt("Введите ваш возраст");
-
-if (age == 15) {
-alert("Вы еще слишком юны");
+switch (age) {
+  case '15':
+    alert ("Вы еще слишком юны");
+    break;
+  case '25':
+    alert ("Вы в расцвете сил");
+    break;
+  case '80':
+  case '90':
+    alert( "Вы уже слишком стар для этого" );
+    break;
+  default:
+    alert( "Мы не готовы принять вашу заявку" );
+    break;
 }
-if (a == 25) {
-alert("Вы в расцвете сил");
-}
 
-if (a == 80 || a == 90) {
-alert( "Вы уже слишком стар для этого" );
-}
+let number = prompt('Введите число');
+let degree = prompt('Введите степень числа');
+let result = 1;
+let i = 0;
 
-if (a != 80 && a != 90 && a != 15 && a != 25) {
-alert( "Мы не готовы принять вашу заявку" );
+while (i < degree) {
+  result *= number;
+  i++;
+  
 }
+alert (result);
+
+
+do {
+  result *= number;
+  i++;
+} while (i < degree);
+alert (result);
+
+for (let i = 0; i < degree; i++) {
+  result *= number;
+}
+alert (result);
